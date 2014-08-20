@@ -9,5 +9,5 @@ pyMSR is being designed and tested with the MSR605 MagStripe reader/encoder but 
 
 pyMSR originated as a fork of libMSR605 by Louis Bodnar (https://github.com/pezmanlou/msr605). However since we broke off the vast majority of his code has been removed, improved or redone by myself. For comparison please check out his repository shared above.
 
-pyMSR is licensed with the MIT license
+pyMSR is licensed with the MIT license. Please read the License file for further information on this.
 

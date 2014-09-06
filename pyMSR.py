@@ -34,7 +34,7 @@ class pyMSR:
 			print "MSR Initialized On Port " + port
 			self.__msr.write(RESET)
 
-	def reset(self, printinfo=False)
+	def reset(self, printinfo=False):
 		self.__msr.write(RESET)
 		if (printinfo == True):
 			print "MSR has been reset"
@@ -58,12 +58,12 @@ class pyMSR:
 				return d
 			d += b
 
-	def allLED(self, printinfo=False)
+	def allLED(self, printinfo=False):
 		self.__msr.write(ALL_LED_ON)
 		if (printinfo == True):
 			print "All LED's have been turned on"
 
-	def noLED(self, printinfo=False)
+	def noLED(self, printinfo=False):
 		self.__msr.write(ALL_LED_OFF)
 		if (printinfo == True):
 			print "All LED's have been turned off"
@@ -91,7 +91,7 @@ class pyMSR:
 		print device[:-1]
 	
 	
-	def readTrack(self, track=1)
+	def readTrack(self, track=1):
 		if (track == 1):
 			trackid = '\x01'
 		elif (track == 2):
@@ -116,9 +116,9 @@ class pyMSR:
 		self.__msr.write(RESET)
 
 			
-	def readISO(self)
+	def readISO(self):
 		self.__msr.write(READ_ISO)
-		data[]
+		data = []
 		if (self.__msr.read() != ESC):
 			print "Expected Byte Mismatch"
 			return data
@@ -133,7 +133,7 @@ class pyMSR:
 			else:
 				print "Expected Byte Mismatch"
 				return data
-		retval = "Track 1: ".data[0].'\n'."Track 2: ".data[1].'\n'."Track 3: ".data[2]
+		retval = "Track 1: "+ data[0] + '\n' + "Track 2: " + data[1] + '\n' + "Track 3: " +data[2]
 		return retval
 		self.__msr.write(RESET)
 
